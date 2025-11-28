@@ -8,7 +8,7 @@ repositories:
   - name: jetstack
     url: https://charts.jetstack.io
   - name: home-env-synchronizer
-    url: git+https://github.com/TourmalineCore/home-env-synchronizer.git?ref=master
+    url: git+https://github.com/TourmalineCore/home-env-synchronizer.git?ref=0f6173182ebbfacff8624a943547baa9161995fe
     
 environments:
   prod:
@@ -103,7 +103,7 @@ releases:
     chart: home-env-synchronizer/home-env-synchronizer
     values:
       # https://helmfile.readthedocs.io/en/latest/#loading-remote-environment-values-files
-      - git::https://github.com/TourmalineCore/home-env-synchronizer.git@/ci/values.yaml?ref=master
+      - git::https://github.com/TourmalineCore/home-env-synchronizer.git@/ci/values.yaml?ref=0f6173182ebbfacff8624a943547baa9161995fe
       - values.yaml.gotmpl
       - values-env-synchronizer.yaml.gotmpl
     hooks:
